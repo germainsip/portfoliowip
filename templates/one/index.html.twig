@@ -1,0 +1,138 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Portfolio{% endblock %}
+
+{% block body %}
+
+
+    <p class="text-center text-lg font-semibold text-white">Ici vous trouverez tous mes travaux. Enfin, ceux que je partage avec vous...</p>
+    <p class="text-center text-lg font-semibold text-white">Des Cours, des travaux, des idées...</p>
+    <br>
+    <p class="text-center text-lg font-semibold text-white">Sincèrement Germain SIPIERE <a class="text-yellow-500" href="mailto:gsipiere@gmail.com?subject=contact">gsipiere@gmail.com</a></p>
+    <br>
+    <p class="text-center text-lg font-semibold text-white">- &hearts;&hearts;&hearts; -</p>
+    <div class="m-10 flex space-x-4">
+        <div class="flex-col w-2/3 space-y-3">
+            <h1 class="text-4xl font-extrabold text-white underline mb-6">Les 4 dernière vidéos... </h1>
+
+            <div class="grid grid-cols-2 gap-6">
+                {% for cour in coursVideos %}
+                    <div class="bg-blue-300 rounded-2xl shadow">
+                        <div class="bg-white p-2 transform -translate-x-2 -translate-y-2 shadow-lg hover:shadow-2xl transform hover:-rotate-3 rounded-2xl">
+
+                            <a href="" class="bg-red-600 text-white rounded-full absolute right-0 top-0 transform translate-x-1 -translate-y-1 hover:shadow-2xl">
+                                <svg class="text-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </a>
+                            <h2 class="text-xl font-semibold">
+
+                                {{ cour.name }}
+                            </h2>
+                            <img class="" src="{{ cour.url | youtube_thumbnail }}" alt="">
+                            <p class="p-1">{{ cour.description }}</p>
+
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+        <div class="w-1/3 flex-wrap bg-blob-card bg-no-repeat bg-contain bg-center text-center self-center justify-around p-10">
+            <img class="self-center" src="img/livre.png" alt="">
+        </div>
+
+
+    </div>
+
+
+
+
+    <svg class="transform rotate-180" viewBox="0 0 1440 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+            <g filter="url(#filter0_d)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M-97 124.944C-42.9925 120.223 37.5117 113.248 129.823 105.249C206.561 98.6006 291.458 91.2447 376.076 83.8889C569.08 67.1111 763.535 50.3333 956.538 61.5185C1149.54 72.7037 1344 111.852 1439.77 131.426L1537 151V0H1439.77H956.538H376.076L-97 0V124.944Z" fill="white"/>
+            </g>
+        </g>
+        <defs>
+            <filter id="filter0_d" x="-101" y="0" width="1642" height="159" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            <clipPath id="clip0">
+                <rect width="1440" height="1024" fill="white"/>
+            </clipPath>
+        </defs>
+    </svg>
+    <p class="bg-white p-3 text-center text-2xl">Mais aussi des applications</p>
+    <svg viewBox="0 0 1440 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+            <g filter="url(#filter0_d)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M-97 124.944C-42.9925 120.223 37.5117 113.248 129.823 105.249C206.561 98.6006 291.458 91.2447 376.076 83.8889C569.08 67.1111 763.535 50.3333 956.538 61.5185C1149.54 72.7037 1344 111.852 1439.77 131.426L1537 151V0H1439.77H956.538H376.076L-97 0V124.944Z" fill="white"/>
+            </g>
+        </g>
+        <defs>
+            <filter id="filter0_d" x="-101" y="0" width="1642" height="159" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            <clipPath id="clip0">
+                <rect width="1440" height="1024" fill="white"/>
+            </clipPath>
+        </defs>
+    </svg>
+
+    <div class="m-10 flex space-x-4">
+        <div class="w-1/3 flex-wrap bg-blob-card bg-no-repeat bg-contain bg-center text-center self-center justify-around p-10">
+            <img src="img/salut.png" alt="">
+        </div>
+        <div class="flex-col w-2/3 space-y-3">
+
+            <h1 class="text-4xl font-extrabold text-white underline mb-6">Les 4 dernier projets... </h1>
+
+            <div class="grid grid-cols-2 gap-6">
+                {% for cour in coursVideos %}
+                    <div class="bg-blue-300 rounded-2xl shadow">
+                        <div class="bg-white p-2 transform -translate-x-2 -translate-y-2 shadow-lg hover:shadow-2xl transform hover:-rotate-3 rounded-2xl">
+
+                            <a href="" class="bg-red-600 text-white rounded-full absolute right-0 top-0 transform translate-x-1 -translate-y-1 hover:shadow-2xl">
+                                <svg class="text-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </a>
+                            <h2 class="text-xl font-semibold">
+
+                                {{ cour.name }}
+                            </h2>
+                            <img class="" src="{{ cour.url | youtube_thumbnail }}" alt="">
+                            <p class="p-1">{{ cour.description }}</p>
+
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+{% endblock %}
