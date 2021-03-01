@@ -28,9 +28,14 @@ class Depo
     private $url;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", options={"default"=false}, nullable=true)
      */
     private $visibility;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
 
     public function getId(): ?int
     {
@@ -69,6 +74,18 @@ class Depo
     public function setVisibility(bool $visibility): self
     {
         $this->visibility = $visibility;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

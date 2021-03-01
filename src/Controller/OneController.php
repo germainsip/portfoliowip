@@ -6,6 +6,7 @@ use App\Entity\CoursVideo;
 use App\Form\CoursVideoType;
 use App\Repository\CoursVideoRepository;
 
+use App\Repository\DepoRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,13 +22,15 @@ class OneController extends AbstractController
      * @Route("/", name="app_home")
      * @param Request $request
      * @param CoursVideoRepository $coursVideoRepository
+     * @param DepoRepository $depoRepository
      * @param EntityManagerInterface $em
      * @return Response
      */
-    public function index(Request $request, CoursVideoRepository $coursVideoRepository, EntityManagerInterface $em): Response
+    public function index(Request $request, CoursVideoRepository $coursVideoRepository,DepoRepository $depoRepository, EntityManagerInterface $em): Response
     {
         return $this->render('one/index.html.twig', [
             'coursVideos' => $coursVideoRepository->findBy(array(), array('id' => 'DESC'), 4),
+            'depos' => $depoRepository->findBy(array(),array('id'=> 'DESC'),4),
             'admin' => $this->admin,
 
         ]);
