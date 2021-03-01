@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+
+
+    <div class="bg-blue-300 rounded-2xl shadow m-10">
+        <div  class="bg-white p-2 transform -translate-x-2 -translate-y-2 shadow-lg hover:shadow-2xl rounded-2xl">
+            <h2 class="text-xl font-semibold">
+                {{ coursVideo.name }}
+            </h2>
+                {{ coursVideo.url | youtube_player | raw }}
+
+
+        </div>
+    </div>
+
+    <p class="text-center text-lg font-semibold text-white">{{ coursVideo.description }}</p>
+
+
+{% endblock %}

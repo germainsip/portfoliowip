@@ -24,6 +24,7 @@ class YoutubeExtension extends AbstractExtension
             // parameter: ['is_safe' => ['html']]
             // Reference: https://twig.symfony.com/doc/2.x/advanced.html#automatic-escaping
             new TwigFilter('youtube_thumbnail', [$this, 'youtubeThumbnail']),
+            new TwigFilter('youtube_player', [$this, 'youtubePlayer']),
         ];
     }
 
@@ -39,6 +40,17 @@ class YoutubeExtension extends AbstractExtension
         try {
             $video = $this->youtubeParser->parse($value);
             return $video->getLargestThumbnail();
+
+        } catch (ServiceNotAvailableException $e) {
+            return "Video non trouvée";
+        }
+    }
+
+    public function youtubePlayer($value): string
+    {
+        try {
+            $video = $this->youtubeParser->parse($value);
+            return $video->getEmbedCode('100%',600,true,true);
 
         } catch (ServiceNotAvailableException $e) {
             return "Video non trouvée";
