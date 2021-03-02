@@ -1,1 +1,1 @@
-web: heroku-php-apache2 public/ && npm install --force
+web: heroku-php-apache2 public/ && npm run build
