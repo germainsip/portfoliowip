@@ -35,7 +35,7 @@ class OneController extends AbstractController
 
         ]);
     }
-
+// FIXME: Cette méthode serait mieux dans un controller à part
     /**
      * @Route("/listvideo", name="app_listvideo")
      * @param Request $request
