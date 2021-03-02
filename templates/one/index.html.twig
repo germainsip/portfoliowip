@@ -171,7 +171,9 @@
 
                                 {{ depo.name }}
                             </h2>
-                            <img class="" src="{{ depo | shot }}" alt="{{ depo.name }}">
+                            <a href="{{ depo.url }}">
+                                <img class="" src="{{ depo | shot }}" alt="">
+                            </a>
                             <p class="p-1">{{ depo.description }}</p>
 
                         </div>
