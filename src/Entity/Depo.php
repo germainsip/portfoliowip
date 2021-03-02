@@ -27,10 +27,7 @@ class Depo
      */
     private $url;
 
-    /**
-     * @ORM\Column(type="boolean", options={"default"=false}, nullable=true)
-     */
-    private $visibility;
+
 
     /**
      * @ORM\Column(type="text")
@@ -66,17 +63,7 @@ class Depo
         return $this;
     }
 
-    public function getVisibility(): ?bool
-    {
-        return $this->visibility;
-    }
 
-    public function setVisibility(bool $visibility): self
-    {
-        $this->visibility = $visibility;
-
-        return $this;
-    }
 
     public function getDescription(): ?string
     {
