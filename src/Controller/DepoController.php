@@ -42,4 +42,19 @@ class DepoController extends AbstractController
             'admin' => $this->admin
         ]);
     }
+
+    /**
+     * @Route("deletedepo/{id}", name="app_delete_depo")
+     * @param Request $request
+     * @param Depo $depo
+     * @param EntityManagerInterface $em
+     * @return Response
+     */
+    public function delVideo(Request $request, Depo $depo, EntityManagerInterface $em): Response
+    {
+        $em->remove($depo);
+        $em->flush();
+        $referer = $request->headers->get('referer');
+        return $this->redirect($referer);
+    }
 }

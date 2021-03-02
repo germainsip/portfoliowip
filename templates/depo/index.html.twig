@@ -45,7 +45,7 @@
                             {{ depo.name }}
                         </h2>
                         <a href="{{ path('app_video',{'id':depo.id}) }}">
-                            <img class="" src="{{ depo.url  }}" alt="">
+                            <img class="" src="{{ depo | shot }}" alt="">
 
                         </a>
                         <p class="p-1">{{ depo.description }}</p>
