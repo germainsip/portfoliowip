@@ -25,7 +25,7 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress",
         "postinstall": "encore production --progress",
-        "heroku-postbuild": "encore production --progress ./webpack.config.js && php bin/console d:s:u --force"
+        "heroku-postbuild": "encore production --progress && php bin/console d:s:u --force"
     },
     "dependencies": {
         "puppeteer": "^7.1.0",
