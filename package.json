@@ -31,6 +31,7 @@
         "puppeteer": "^7.1.0",
         "@symfony/webpack-encore": "^1.0.0",
         "postcss-loader": "^5.0.0",
-        "purgecss-webpack-plugin": "^4.0.2"
+        "purgecss-webpack-plugin": "^4.0.2",
+        "glob-all": "^3.2.1"
     }
 }
