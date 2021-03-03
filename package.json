@@ -32,6 +32,7 @@
         "@symfony/webpack-encore": "^1.0.0",
         "postcss-loader": "^5.0.0",
         "purgecss-webpack-plugin": "^4.0.2",
+        "@symfony/stimulus-bridge": "^2.0.0",
         "glob-all": "^3.2.1"
     }
 }
