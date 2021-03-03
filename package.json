@@ -15,7 +15,8 @@
     },
     "license": "UNLICENSED",
     "engines": {
-        "node": "8.2.1"
+        "node": "v14.6.*",
+        "npm":"7.4.0"
     },
     "private": true,
     "scripts": {
@@ -23,7 +24,8 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress",
-        "postinstall": "encore production --progress"
+        "postinstall": "encore production --progress",
+        "heroku-postbuild": "encore production --progress ./webpack.config.js && php bin/console d:s:u --force"
     },
     "dependencies": {
         "puppeteer": "^7.1.0"
