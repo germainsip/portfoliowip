@@ -31,9 +31,9 @@ class BrowserExtension extends AbstractExtension
     public function urlThumbnail(Depo $value): string
     {
         // on vérifie que le fichier existe
-        if (file_exists("img/".$value->getId().".png")){
+        if (file_exists("img/shots/".$value->getId().".png")){
             // s'il existe on regarde s'il a moins de 2 jours sinon on le rafraîchie
-            return (time()-filemtime("img/".$value->getId().".png") <= 2 * 3600)?"img/".$value->getId().".png":createImg($value);
+            return (time()-filemtime("img/shots/".$value->getId().".png") <= 2 * 3600)?"img/shots/".$value->getId().".png":createImg($value);
         } else {
 
             return createImg($value);
@@ -50,6 +50,6 @@ function createImg(Depo $value): string
         ->windowSize(1920, 1080)
         ->timeout(100)
         ->save("img/shots/".$value->getId().".png");
-    return "img/".$value->getId().".png";
+    return "img/shots/".$value->getId().".png";
 
 }
