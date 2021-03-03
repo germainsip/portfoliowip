@@ -49,7 +49,7 @@ function createImg(Depo $value): string
         ->noSandbox(true)
         ->windowSize(1920, 1080)
         ->timeout(100)
-        ->save("img/".$value->getId().".png");
+        ->save("img/shots/".$value->getId().".png");
     return "img/".$value->getId().".png";
 
 }
