@@ -47,9 +47,8 @@ function createImg(Depo $value): string
 {
     $image = Browsershot::url($value->getUrl())
         ->noSandbox(true)
-        ->timeout(100)
         ->windowSize(1920, 1080)
-        ->fit(Manipulations::FIT_CONTAIN, 300, 300)
+        ->timeout(100)
         ->save("img/".$value->getId().".png");
     return "img/".$value->getId().".png";
 
