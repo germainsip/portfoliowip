@@ -28,6 +28,7 @@
         "heroku-postbuild": "encore production --progress ./webpack.config.js && php bin/console d:s:u --force"
     },
     "dependencies": {
-        "puppeteer": "^7.1.0"
+        "puppeteer": "^7.1.0",
+        "@symfony/webpack-encore": "^1.0.0"
     }
 }
