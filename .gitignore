@@ -18,7 +18,7 @@
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 ###/public/build/
-/public/img/shots/
+/public/img/shots/*.png
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
