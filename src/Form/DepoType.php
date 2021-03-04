@@ -17,7 +17,7 @@ class DepoType extends AbstractType
             ->add('name',TextType::class,['label'=>'Nom'])
             ->add('url',TextType::class)
             ->add('description',TextType::class,['label'=>'Description'])
-            ->add('submit',SubmitType::class,['label'=>'Envoyer'])
+            ->add('submit',SubmitType::class,['label'=>'Ajouter'])
         ;
     }
 

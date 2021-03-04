@@ -73,11 +73,11 @@
 {%- endblock form_errors -%}
 
 {% block form_label_class -%}
-    block text-grey-darker font-bold md:text-right mb-1 md:mb-0 pr-4
+    block text-white font-bold md:text-right mb-1 md:mb-0 pr-4
 {% endblock form_label_class -%}
 
 {% block input_class -%}
-    {% if form.vars.errors|length %}border-red border-1{% endif %} appearance-none bg-grey-lighter border-2 border-grey-lighter shadow-inner rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-blue-light
+    {% if form.vars.errors|length %}border-red border-1{% endif %} appearance-none bg-grey-lighter border-2 border-blue-300 shadow-inner rounded-2xl w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-blue-light
 {% endblock input_class -%}
 
 {% block form_group_class -%}

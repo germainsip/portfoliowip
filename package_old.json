@@ -23,9 +23,23 @@
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "heroku-postbuild": "php bin/console d:s:u --force"
+        "build": "encore production --progress",
+        "postinstall": "encore production --progress",
+        "heroku-postbuild": "encore production --progress && php bin/console d:s:u --force"
     },
     "dependencies": {
-        "puppeteer": "^7.1.0"
+        "puppeteer": "^7.1.0",
+        "@symfony/stimulus-bridge": "^2.0.0",
+        "@symfony/webpack-encore": "^1.0.0",
+        "autoprefixer": "^10.2.4",
+        "core-js": "^3.0.0",
+        "glob-all": "^3.2.1",
+        "path": "^0.12.7",
+        "postcss-loader": "^5.0.0",
+        "purgecss-webpack-plugin": "^4.0.2",
+        "regenerator-runtime": "^0.13.2",
+        "stimulus": "^2.0.0",
+        "tailwindcss": "^2.0.3",
+        "webpack-notifier": "^1.6.0"
     }
 }

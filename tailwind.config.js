@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'wave-nav': "url(../img/Rewave2.png)",
+        'wave-inv': "url(../img/Rewave2inv.png)",
         'blob-card':"url(../img/blob1.svg)"
       })
     },

@@ -1,0 +1,23 @@
+<div class="bg-blue-300 rounded-2xl shadow">
+    <div class="bg-white p-2 transform -translate-x-2 -translate-y-2 shadow-lg hover:shadow-2xl {{ (admin)? : "transform hover:-rotate-3"}} rounded-2xl">
+        {% if admin %}
+            <a href="{{ path('app_delete_depo',{'id':depo.id}) }}"
+               class="bg-red-600 text-white rounded-full absolute right-0 top-0 transform translate-x-1 -translate-y-1 hover:shadow-2xl">
+                <svg class="text-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                     viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </a>
+        {% endif %}
+        <h2 class="text-xl font-semibold">
+
+            {{ depo.name }}
+        </h2>
+        <a href="{{ depo.url }}">
+            <img class="" src="{{ depo | shot }}" alt="">
+        </a>
+        <p class="p-1">{{ depo.description }}</p>
+
+    </div>
+</div>

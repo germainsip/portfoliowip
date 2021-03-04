@@ -12,15 +12,15 @@
 
 
 </head>
-<body class=" bg-fixed m-0">
+<body class="bg-fixed m-0">
 {% include 'header.html.twig' %}
 {% block body %}{% endblock %}
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
 
-
+{% block footer %}
 {% include 'footer.html.twig' %}
-
+{% endblock %}
 </body>
 </html>
