@@ -1,8 +1,8 @@
 {
-  "build/app.css": "/build/app.ebd259f8.css",
-  "build/app.js": "/build/app.69460b6e.js",
-  "build/runtime.js": "/build/runtime.8b723eac.js",
-  "build/758.7784413f.js": "/build/758.7784413f.js",
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-7db861.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-7db861.js",
   "build/images/Rewave2.png": "/build/images/Rewave2.65436504.png",
   "build/images/Rewave2inv.png": "/build/images/Rewave2inv.927e911b.png",
   "build/images/blob1.svg": "/build/images/blob1.6531c1bb.svg"

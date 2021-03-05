@@ -21,7 +21,7 @@
     "private": true,
     "scripts": {
         "dev-server": "encore dev-server",
-        "dev": "encore dev",
+        "dev": "encore dev --progress",
         "watch": "encore dev --watch",
         "heroku-postbuild": "php bin/console d:s:u --force"
     },
