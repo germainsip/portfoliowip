@@ -24,20 +24,23 @@
     <div class="p-5 mx-auto bg-white">
         <nav class="flex-row lg:flex lg:justify-between">
             <div class="flex flex-row justify-between">
-                <a class="text-2xl font-extrabold" href="{{ path('app_home') }}">Mon PortFolio<span class="text-yellow-500 text-3xl">WIP</span></a>
+                <a class="text-5xl lg:text-2xl font-extrabold" href="{{ path('app_home') }}">Mon PortFolio<span class="text-yellow-500 text-5xl lg:text-3xl">WIP</span></a>
 
-                <p id="hamburgerbtn" class="p-1 mb-1 font-semibold border-2 border-blue-800 hover:bg-blue-800 hover:text-white rounded-full lg:hidden">
+                <p id="hamburgerbtn" class="p-3 mb-1 font-semibold border-4 border-blue-300 shadow hover:bg-blue-800 hover:text-white rounded-full lg:hidden">
                     {#<svg class="w-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>#}
-                    <img class="w-8" src="favicon.ico" alt="">
+                    <svg class="w-20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
+                    </svg>
+                    {#<img class="w-20" src="favicon.ico" alt="">#}
                 </p>
             </div>
 
             <ul class="hidden lg:flex lg:flex-row" id="mobileMenu">
-                <li  class="mb-3 lg:mr-5 lg:mt-3 text-2xl lg:text-base"><a class="p-1  font-semibold hover:bg-blue-800 hover:text-white rounded-md" href="{{ path('app_listvideo') }}">Mes vidéos</a></li>
-                <li  class="mb-3 lg:mr-5 lg:mt-3 text-2xl lg:text-base"><a class="p-1  font-semibold hover:bg-blue-800 hover:text-white rounded-md" href="{{ path('app_listdepo') }}">Mes projets</a></li>
-                <li  class="mb-3 lg:mr-5 lg:mt-3 text-2xl lg:text-base"><a class="p-1  font-semibold hover:bg-blue-800 hover:text-white rounded-md" href="">Qui suis-je?</a></li>
+                <li  class="mb-3 lg:mr-5 lg:mt-3 text-5xl lg:text-base"><a class="p-1  font-semibold hover:bg-blue-800 hover:text-white rounded-md" href="{{ path('app_listvideo') }}">Mes vidéos</a></li>
+                <li  class="mb-3 lg:mr-5 lg:mt-3 text-5xl lg:text-base"><a class="p-1  font-semibold hover:bg-blue-800 hover:text-white rounded-md" href="{{ path('app_listdepo') }}">Mes projets</a></li>
+                <li  class="mb-3 lg:mr-5 lg:mt-3 text-5xl lg:text-base"><a class="p-1  font-semibold hover:bg-blue-800 hover:text-white rounded-md" href="">Qui suis-je?</a></li>
             </ul>
         </nav>
     </div>
