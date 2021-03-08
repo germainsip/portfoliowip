@@ -1,6 +1,6 @@
 <div class="sticky top-0 z-10 ">
 
-    <div class="px-10 pt-3 flex-auto lg:inline-flex  bg-white w-full">
+    {# <div class="px-10 pt-3 flex-auto lg:inline-flex  bg-white w-full">
         <a href="{{ path('app_home') }}" class="flex-grow "><div class="text-xl lg:text-3xl font-extrabold">Mon PortFolio</div> <div class="text-yellow-500 text-2xl transform lg:translate-x-48 transform lg:-translate-y-5">WIP</div></a>
         <ul class="invisible inline-flex lg:visible ">
             <li><a class="font-semibold border-2 border-blue-800 hover:bg-blue-800 hover:text-white rounded-md ml-1 p-1 "
@@ -20,8 +20,34 @@
                 Elément de menu
             </ul>
         </div>
+    </div> #}
+    <div class="p-5 mx-auto bg-white">
+        <nav class="flex-row md:flex md:justify-between">
+            <div class="flex flex-row justify-between">
+                <a class="text-2xl font-extrabold" href="{{ path('app_home') }}">Mon PortFolio<span class="text-yellow-500 text-3xl">WIP</span></a>
+
+                <p id="hamburgerbtn" class="p-1 mb-1 font-semibold border-2 border-blue-800 hover:bg-blue-800 hover:text-white rounded-md md:hidden">
+                    menu
+                </p>
+            </div>
+
+            <ul class="hidden md:flex md:flex-row" id="mobileMenu">
+                <li  class="p-1 mb-1 md:mr-5 font-semibold border-2 border-blue-800 hover:bg-blue-800 hover:text-white rounded-md"><a href="{{ path('app_listvideo') }}">Mes vidéos</a></li>
+                <li  class="p-1 mb-1 md:mr-5 font-semibold border-2 border-blue-800 hover:bg-blue-800 hover:text-white rounded-md"><a href="{{ path('app_listdepo') }}">Mes projets</a></li>
+                <li  class="p-1 mb-1 md:mr-5 font-semibold border-2 border-blue-800 hover:bg-blue-800 hover:text-white rounded-md"><a href="">Qui suis-je?</a></li>
+            </ul>
+        </nav>
     </div>
     <div class="transform -translate-y-1 h-28 bg-wave-nav bg-no-repeat bg-cover w-full">
 
     </div>
+    <script>
+        let hamburger = document.getElementById('hamburgerbtn');
+
+        let mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function(){
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </div>

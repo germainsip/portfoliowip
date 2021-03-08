@@ -1,6 +1,21 @@
 {
+    "composer/ca-bundle": {
+        "version": "1.2.9"
+    },
+    "composer/composer": {
+        "version": "2.0.11"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.1"
+    },
+    "composer/semver": {
+        "version": "3.2.4"
+    },
+    "composer/spdx-licenses": {
+        "version": "1.5.5"
+    },
+    "composer/xdebug-handler": {
+        "version": "1.4.5"
     },
     "copadia/php-video-url-parser": {
         "version": "v1.0.3"
@@ -90,8 +105,14 @@
     "guzzlehttp/psr7": {
         "version": "1.7.0"
     },
+    "icanhazstring/composer-unused": {
+        "version": "0.7.5"
+    },
     "intervention/image": {
         "version": "2.5.1"
+    },
+    "justinrainbow/json-schema": {
+        "version": "5.2.10"
     },
     "laminas/laminas-code": {
         "version": "4.0.0"
@@ -146,6 +167,15 @@
     },
     "ralouphie/getallheaders": {
         "version": "3.0.3"
+    },
+    "react/promise": {
+        "version": "v2.8.0"
+    },
+    "seld/jsonlint": {
+        "version": "1.8.3"
+    },
+    "seld/phar-utils": {
+        "version": "1.1.1"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
