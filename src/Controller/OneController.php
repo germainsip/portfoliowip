@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class OneController extends AbstractController
 {
-    private $admin = true;
+    private $admin = false;
 
     /**
      * @Route("/", name="app_home")
