@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DepoController extends AbstractController
 {
-    private $admin = true;
+    private $admin = false;
     /**
      * @Route("/listdepo", name="app_listdepo")
      * @param Request $request
