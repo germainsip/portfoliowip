@@ -9,6 +9,8 @@ Pour le moment le résultat est concluant à l'exception du démarrage du dyno q
 Demo [ici](https://sipfolio.herokuapp.com) 
 
 > il peut arriver que le dyno ai du mal et il faut recharger la page une fois pour que tout fonctionne s'il s'était endormie
+ 
+![screen](sipfolio.png)
 
 ## Techniques testés
 - Mise en page avec twig, webpack et surtout tailwindcss.
