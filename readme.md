@@ -7,6 +7,7 @@ L'objectif de ce projet est de tester le comportement de symfony sur Heroku avec
 Pour le moment le résultat est concluant à l'exception du démarrage du dyno qui est un peu long.
 
 ## Techniques testés
+- Mise en page avec twig, webpack et surtout tailwindcss.
 - extension twig permettant l'affichage de vignette et d'iframe à partir de l'url d'nu vidéo
 - extension twig intégrant un headless chrome pour la génération de screenshot de sites à partir de l'url et activation d'une mise à jour à 2 jours d'intervalle.
 ...
@@ -15,5 +16,6 @@ Pour le moment le résultat est concluant à l'exception du démarrage du dyno q
 
 TODO:
 - login admin
-- API
-- application electron ou Flutter de gestion de contenus
+- intégration Alpine js?
+- API avec api-platform
+- application Electron (Angular) ou Flutter de gestion de contenus
